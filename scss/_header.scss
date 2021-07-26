@@ -1,0 +1,64 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    @media(max-width: 768px) {
+        height: 56px;
+    }
+}
+.menu{
+    display: flex;
+}
+.logo a{
+    display: block;
+    background-image: url(../pic/d’Perfume.png);
+    width: 128px;
+    height: 38px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    text-indent: 101%;
+}
+.header .menu a{
+    position: relative;
+    display: block;
+    padding: 15px;
+    color: #8D8D8D;
+    font-size: 20px;
+}
+.header .menu i{
+    padding: 3px;
+    @media(max-width: 768px) {
+        padding: 0;
+    }
+}
+.header .menu em{
+    display: none;
+}
+@media (max-width:768px){
+    .header .menu span{
+        display: none;
+    }
+    .header .menu em{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #916000;
+        color: #fff;
+        border-radius: 100%;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+    }
+    .m-hide{
+        display: none;
+    }
+}
+.appear{
+    display: none;
+    @media(max-width: 768px) {
+        display: inline;
+    }
+}

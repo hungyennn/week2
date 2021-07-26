@@ -1,0 +1,52 @@
+.introduction{
+    background-image:url(../pic/index1.jpg);
+    background-position: right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @media(max-width: 768px){
+        background-position: left;
+        height: 480px;
+    }
+}
+.text{
+    padding: 295px 0;
+    padding-left: 43%;
+    color: white;
+    line-height: 1.5;
+    @media(max-width: 768px) {
+        padding: 100px 0;
+    }
+}
+.text h2{
+    font-size: 40px;
+    font-weight: bold;
+    @media(max-width: 768px) {
+        font-size: 32px;
+        line-height: 48px;
+    }
+}
+.text p{
+    font-size: 24px;
+    @media(max-width: 768px) {
+        font-size:20px;
+        line-height: 30px;
+    }
+}
+.text a{
+    display: block;
+    width: 80%;
+    margin-top: 16px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    border: 2px solid #FFFFFF;
+    border-radius: 30px;
+    padding: 10px 0;
+    cursor: pointer;
+    &:hover{
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    @media(max-width: 768px){
+        width: 100%;
+    }
+}

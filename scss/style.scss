@@ -1,0 +1,21 @@
+@import "reset";
+body{
+    font-family: -apple-system,BlinkMacSystemFont, "PingFangTC","Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+    @media(max-width:768px) {
+        max-width: 90%;
+    }
+}
+@import "header";
+@import "introduction";
+@import "content";
+@import "product";
+@import "recycling";
+@import "subscription";
+@import "footer";
