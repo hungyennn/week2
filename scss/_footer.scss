@@ -5,27 +5,31 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media(max-width: 768px) {
+    @media(max-width: 767px) {
         height: 80px;
     }
 }
+.footer_logo{
+    background-image: url(../pic/d’Perfumewhite.png);
+    width: 128px;
+    height: 38px;
+    margin-right: 20px;
+}
 .copyright {
     display: flex;
-    justify-content: flex-start;
+    // justify-content: flex-start;
     align-items: center;
-    img{
-        margin-right: 20px;
-    }
     p{
         color: #fff;
         font-size: 14px;
     }
+    
 }
 .footer_menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media(max-width: 768px) {
+    @media(max-width: 767px) {
         display: none;
     }
 }
@@ -38,3 +42,4 @@
         color: rgb(199, 199, 199);
     }
 }
+

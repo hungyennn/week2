@@ -67,12 +67,18 @@ body {
   font-family: -apple-system,BlinkMacSystemFont, "PingFangTC","Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
 }
 
+body p, body h2, body h3 {
+  line-height: 1.5;
+}
+
 a {
   text-decoration: none;
 }
 
 .container {
-  max-width: 1110px;
+  max-width: 1140px;
+  padding: 0 15px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -82,14 +88,42 @@ a {
   }
 }
 
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.mb-3 {
+  margin-bottom: 24px;
+}
+
+.mb-4 {
+  margin-bottom: 32px;
+}
+
+.mb-5 {
+  margin-bottom: 40px;
+}
+
+.mb-6 {
+  margin-bottom: 48px;
+}
+
+.mb-7 {
+  margin-bottom: 56px;
+}
+
+.mb-14 {
+  margin-bottom: 112px;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -110,44 +144,58 @@ a {
   display: flex;
 }
 
-.logo a {
-  display: block;
+.text-hide {
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.bg-logo {
   background-image: url(../pic/d’Perfume.png);
   width: 128px;
   height: 38px;
-  white-space: nowrap;
-  overflow: hidden;
-  cursor: pointer;
-  text-indent: 101%;
+}
+
+.d-block {
+  display: block;
+}
+
+.relative {
+  position: relative;
 }
 
 .header .menu a {
-  position: relative;
   display: block;
   padding: 15px;
   color: #8D8D8D;
   font-size: 20px;
 }
 
+@media (max-width: 767px) {
+  .header .menu a {
+    padding: 5px;
+  }
+}
+
 .header .menu i {
   padding: 3px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .header .menu i {
     padding: 0;
   }
 }
 
-.header .menu em {
+.m_cart {
   display: none;
 }
 
-@media (max-width: 768px) {
-  .header .menu span {
+@media (max-width: 767px) {
+  .d_cart {
     display: none;
   }
-  .header .menu em {
+  .m_cart {
     display: block;
     position: absolute;
     top: 0;
@@ -156,8 +204,9 @@ a {
     color: #fff;
     border-radius: 100%;
     text-align: center;
-    width: 20px;
-    height: 20px;
+    font-size: 12px;
+    width: 16px;
+    height: 14px;
   }
   .m-hide {
     display: none;
@@ -168,31 +217,45 @@ a {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .appear {
-    display: inline;
+    display: block;
+    padding-left: 15px;
   }
 }
 
 .introduction {
   background-image: url(../pic/index1.jpg);
-  background-position: right;
+  background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  height: 870px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .introduction {
     background-position: left;
     height: 480px;
   }
 }
 
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 .text {
-  padding: 295px 0;
-  padding-left: 43%;
+  max-width: 445px;
   color: white;
-  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
@@ -226,15 +289,13 @@ a {
 
 .text a {
   display: block;
-  width: 80%;
-  margin-top: 16px;
+  max-width: 350px;
   font-size: 24px;
   text-align: center;
   color: white;
   border: 2px solid #FFFFFF;
   border-radius: 30px;
   padding: 10px 0;
-  cursor: pointer;
 }
 
 .text a:hover {
@@ -271,7 +332,7 @@ a {
   height: 555px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .content-item {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -308,11 +369,19 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 105px;
-  line-height: 1.5;
+  padding: 0 90px;
 }
 
 @media (max-width: 768px) {
+  .description {
+    margin-top: 8px;
+    margin-bottom: 32px;
+    width: 50%;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 767px) {
   .description {
     margin-top: 8px;
     margin-bottom: 32px;
@@ -326,20 +395,18 @@ a {
   font-weight: bold;
 }
 
-.description p {
-  margin-top: 16px;
+.des_p {
   font-size: 20px;
   font-weight: 300;
 }
 
-@media (max-width: 768px) {
-  .description p {
+@media (max-width: 767px) {
+  .des_p {
     margin-top: 4px;
   }
 }
 
 .more {
-  margin-top: 16px;
   display: block;
   color: #AC8A46;
   font-size: 16px;
@@ -353,32 +420,37 @@ a {
 .content-img {
   display: block;
   width: 50%;
-  background-repeat: no-repeat;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .content-img {
     width: 100%;
+  }
+}
+
+.content-img img {
+  width: 100%;
+  height: 555px;
+}
+
+@media (max-width: 767px) {
+  .content-img img {
     height: 350px;
   }
 }
 
-.img1 {
-  background-image: url(../pic/index2.jpg);
-  background-position: top;
-  background-size: cover;
+.cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.img2 {
-  background-image: url(../pic/index3.png);
-  background-position: top;
-  background-size: cover;
+.fill {
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
-.img3 {
-  background-image: url(../pic/index4.jpg);
-  background-position: left;
-  background-size: cover;
+.position-center {
+  background-position: center center;
 }
 
 .img4 {
@@ -387,7 +459,7 @@ a {
   background-size: cover;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .img4 {
     height: 600px;
   }
@@ -397,7 +469,7 @@ a {
   height: 1080px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .maintenance {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -417,21 +489,13 @@ a {
   font-weight: bold;
 }
 
-.maintenance p {
-  font-size: 16px;
-}
-
-.maintenance ul li {
-  margin-bottom: 52px;
-}
-
-@media (max-width: 768p) {
-  .maintenance ul li {
+@media (max-width: 767px) {
+  .maintenance ol li {
     margin-bottom: 20px;
   }
 }
 
-.maintenance a {
+.maintenance .train {
   color: #000;
   border-radius: 30px;
   border: 2px solid #000;
@@ -441,7 +505,7 @@ a {
   font-size: 18px;
 }
 
-.maintenance a:hover {
+.maintenance .train:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -503,15 +567,35 @@ a {
 .product_img {
   display: block;
   background-size: cover;
-  margin-bottom: 8px;
-  width: 350px;
+  width: 340px;
   height: 540px;
 }
 
+@media (max-width: 768px) {
+  .product_img {
+    width: 450px;
+  }
+}
+
+@media (max-width: 767px) {
+  .product_img {
+    width: 340px;
+  }
+}
+
 .sold_out {
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .sold_out p {
@@ -520,7 +604,6 @@ a {
   font-weight: 600;
   line-height: 36px;
   text-align: center;
-  padding-top: 252px;
 }
 
 .product1 {
@@ -577,7 +660,16 @@ a {
 
 .recycling_txt {
   width: 30%;
-  margin-top: 82px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -590,17 +682,10 @@ a {
 .recycling_txt h2 {
   font-size: 32px;
   font-weight: bold;
-  line-height: 48px;
 }
 
 .recycling_txt h3 {
   font-size: 20px;
-  line-height: 30px;
-  margin-bottom: 16px;
-}
-
-.recycling_txt p {
-  line-height: 24px;
 }
 
 .recycling_txt a {
@@ -619,6 +704,16 @@ a {
   background-position: right;
   background-size: cover;
   height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 @media (max-width: 768px) {
@@ -629,10 +724,8 @@ a {
 
 .more h2 {
   color: #8D8D8D;
-  font-size: 32px;
-  line-height: 48px;
+  font-size: 30px;
   font-weight: 600;
-  padding-bottom: 20px;
   padding-top: 312px;
 }
 
@@ -651,7 +744,7 @@ a {
 
 @media (max-width: 768px) {
   .email {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -707,26 +800,26 @@ input[type="submit" i]:hover {
           align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .bottom {
     height: 80px;
   }
+}
+
+.footer_logo {
+  background-image: url(../pic/d’Perfumewhite.png);
+  width: 128px;
+  height: 38px;
+  margin-right: 20px;
 }
 
 .copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.copyright img {
-  margin-right: 20px;
 }
 
 .copyright p {
@@ -746,7 +839,7 @@ input[type="submit" i]:hover {
           align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer_menu {
     display: none;
   }

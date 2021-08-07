@@ -26,19 +26,16 @@
         margin-top: 8px;
     }
     width: 30%;
-    margin-top: 82px;
+    // margin-top: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     h2{
         font-size: 32px;
         font-weight: bold;
-        line-height: 48px;
     }
     h3{
         font-size: 20px;
-        line-height: 30px;
-        margin-bottom: 16px;
-    }
-    p{
-        line-height: 24px;
     }
     a{
         display: block;
